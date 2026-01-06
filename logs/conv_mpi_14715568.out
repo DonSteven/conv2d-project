@@ -1,0 +1,68 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 14715568
+##  Job Name : conv_mpi_scaling
+##  Nodelist : node2344
+##      CPUs : 8
+##  Mem/Node : 8192 MB
+## Directory : /oscar/home/slong29/conv2d-project
+##   Job Started : Fri Dec  5 12:44:49 AM EST 2025
+###############################################################################
+JobID: 14715568
+Workdir: /oscar/home/slong29/conv2d-project
+
+============================
+  Running with 1 MPI ranks
+============================
+
+===== MPI convolution =====
+Image N = 4096 (H=W), K = 7, world_size = 1
+
+CPU (single process): 883.174 ms, 1.86166 GFLOP/s
+MPI total time:       922.239 ms, 1.7828 GFLOP/s
+MPI compute (max):    909.263 ms, 1.80824 GFLOP/s
+Speedup (CPU / MPI total): 0.957641x
+Max abs diff vs CPU:  0
+CSV,4096,1,883.174,1.86166,922.239,1.7828,909.263,1.80824,0.957641
+
+============================
+  Running with 2 MPI ranks
+============================
+
+===== MPI convolution =====
+Image N = 4096 (H=W), K = 7, world_size = 2
+
+CPU (single process): 883.5 ms, 1.86097 GFLOP/s
+MPI total time:       467.695 ms, 3.51547 GFLOP/s
+MPI compute (max):    454.331 ms, 3.61887 GFLOP/s
+Speedup (CPU / MPI total): 1.88905x
+Max abs diff vs CPU:  0
+CSV,4096,2,883.5,1.86097,467.695,3.51547,454.331,3.61887,1.88905
+
+============================
+  Running with 4 MPI ranks
+============================
+
+===== MPI convolution =====
+Image N = 4096 (H=W), K = 7, world_size = 4
+
+CPU (single process): 883.889 ms, 1.86015 GFLOP/s
+MPI total time:       244.025 ms, 6.73769 GFLOP/s
+MPI compute (max):    227.641 ms, 7.22263 GFLOP/s
+Speedup (CPU / MPI total): 3.62212x
+Max abs diff vs CPU:  0
+CSV,4096,4,883.889,1.86015,244.025,6.73769,227.641,7.22263,3.62212
+
+============================
+  Running with 8 MPI ranks
+============================
+
+===== MPI convolution =====
+Image N = 4096 (H=W), K = 7, world_size = 8
+
+CPU (single process): 892.898 ms, 1.84138 GFLOP/s
+MPI total time:       130.429 ms, 12.6058 GFLOP/s
+MPI compute (max):    113.875 ms, 14.4384 GFLOP/s
+Speedup (CPU / MPI total): 6.84583x
+Max abs diff vs CPU:  0
+CSV,4096,8,892.898,1.84138,130.429,12.6058,113.875,14.4384,6.84583
+
