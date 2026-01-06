@@ -1,0 +1,14 @@
+# build artifacts / binaries
+conv_*
+*.o
+*.exe
+
+# Nsight Systems outputs
+*.nsys-rep
+*.qdrep
+*.sqlite
+*.json
+
+# misc
+core
+*.log
